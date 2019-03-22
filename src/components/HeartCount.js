@@ -6,6 +6,7 @@ const HeartCount = () => {
   const messages = igMessages.default;
   return (
     <>
+      <h1>Let's see who Jack sent the heart to the most.</h1>
       {messages.map((message, i) => (
         <CountCard key={i} data={calculate(message)} />
       ))}

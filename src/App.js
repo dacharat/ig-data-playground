@@ -3,7 +3,7 @@ import HeartCount from "./components/HeartCount";
 
 const App = () => {
   return (
-    <div>
+    <div className="container">
       <HeartCount />
     </div>
   );
