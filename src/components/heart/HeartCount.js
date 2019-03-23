@@ -1,6 +1,6 @@
 import React from "react";
-import * as igMessages from "../data/messages.json";
-import CountCard from "./CountCard.js";
+import * as igMessages from "../../data/messages.json";
+import CountCard from "../CountCard";
 
 const HeartCount = () => {
   const messages = igMessages.default;
@@ -8,7 +8,7 @@ const HeartCount = () => {
     <>
       <h1>Let's see who Jack sent the heart to the most.</h1>
       {messages.map((message, i) => (
-        <CountCard key={i} data={calculate(message)} />
+        <CountCard key={i} data={calculate(message)} word={"❤️"} />
       ))}
     </>
   );
@@ -19,6 +19,7 @@ const calculate = message => {
     user1: { name: message.participants[0], count: 0 },
     user2: { name: message.participants[1], count: 0 }
   };
+
   message.conversation.map(con => {
     if (con.sender === hash.user1.name) {
       if (con.heart) hash.user1.count++;
@@ -27,6 +28,7 @@ const calculate = message => {
     }
     return null;
   });
+  
   return hash;
 };
 
