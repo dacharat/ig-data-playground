@@ -7,9 +7,12 @@ const MaiChaunCount = () => {
   return (
     <>
       <h1>Mai Chaun Count</h1>
-      {messages.map((message, i) => (
-        <CountCard key={i} data={calculate(message)} word={"มั่ยชวล"} />
-      ))}
+      {messages.map((message, i) => {
+        let data = calculate(message);
+        return data.user1.count + data.user2.count > 0 ? (
+          <CountCard key={i} data={data} word={"มั่ยชวล"} />
+        ) : null;
+      })}
     </>
   );
 };

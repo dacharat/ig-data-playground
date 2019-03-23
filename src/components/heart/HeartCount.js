@@ -7,9 +7,12 @@ const HeartCount = () => {
   return (
     <>
       <h1>Let's see who Jack sent the heart to the most.</h1>
-      {messages.map((message, i) => (
-        <CountCard key={i} data={calculate(message)} word={"❤️"} />
-      ))}
+      {messages.map((message, i) => {
+        let data = calculate(message);
+        return data.user1.count + data.user2.count > 0 ? (
+          <CountCard key={i} data={calculate(message)} word={"❤️"} />
+        ) : null;
+      })}
     </>
   );
 };
@@ -28,7 +31,7 @@ const calculate = message => {
     }
     return null;
   });
-  
+
   return hash;
 };
 
