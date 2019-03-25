@@ -1,18 +1,8 @@
 import React from "react";
 import * as messageJson from "../../data/messages.json";
 import * as profileJson from "../../data/profile.json";
-import styled from 'styled-components'
+import Card from '../Card'
 import {sortBy, prop, reverse} from 'ramda'
-
-const Card = styled.div`
-  border: 1px solid;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-`;
 
 const ReplyCount = () => {
   const messages = messageJson.default;

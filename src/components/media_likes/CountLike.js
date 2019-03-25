@@ -1,17 +1,7 @@
 import React from "react";
 import * as likesJson from "../../data/likes.json";
 import {sortBy, prop, reverse} from 'ramda'
-import styled from 'styled-components'
-
-const Card = styled.div`
-  border: 1px solid;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-`;
+import Card from '../Card'
 
 const CountLike = () => {
   const likes = likesJson.default.media_likes;  
