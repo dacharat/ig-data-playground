@@ -6,3 +6,4 @@
 - [x] count who is the most reply my story
 - [x] count which account I hit ❤️ the most
 - [x] count number of conversation
+- [x] search word in message

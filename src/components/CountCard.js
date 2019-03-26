@@ -21,13 +21,15 @@ const CountCard = ({ data, word }) => {
       </h2>
       <hr />
       <h4>
-        <Name>{data.user1.name}</Name> send: {data.user1.count} {" " + word}
+        <Name>{data.user1.name}</Name> send: {data.user1.count}{" "}
+        <u>{" " + word}</u>
       </h4>
       <h4>
-        <Name>{data.user2.name}</Name> send: {data.user2.count} {" " + word}
+        <Name>{data.user2.name}</Name> send: {data.user2.count}{" "}
+        <u>{" " + word}</u>
       </h4>
       <h4>
-        Total: {data.user1.count + data.user2.count} {" " + word}
+        Total: {data.user1.count + data.user2.count} <u>{" " + word}</u>
       </h4>
     </Card>
   );
